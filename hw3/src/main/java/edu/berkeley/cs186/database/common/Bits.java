@@ -28,7 +28,7 @@ public class Bits {
    *   - getBit(new byte[]{0b00000000, 0b00000001}, 15) == ONE
    */
   public static Bit getBit(byte[] bytes, int i) {
-    String err = String.format("bytes.length = %d; i = %d.", bytes.length, i);
+    String err = "bytes.length = " + bytes.length + "; i = " + i + ".";
     assert (bytes.length > 0) : err;
     assert (0 <= i && i < bytes.length * 8) : err;
     return getBit(bytes[i/8], i % 8);
